@@ -2,7 +2,7 @@
   width: 100vw;
   min-width: 1280px;
   overflow: hidden;
-  background-image: url(./assets/TopVisual.jpg);
+  background-image: url(/images/TopVisual.jpg);
   display: flex;
   justify-content: center; 
   align-items: center;

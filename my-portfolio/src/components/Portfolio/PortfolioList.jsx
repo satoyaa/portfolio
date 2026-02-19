@@ -1,14 +1,14 @@
-import comingSoon from '../../assets/ComingSoon.png'
+import comingSoon from '/images/ComingSoon.png'
 
-import pdfDark0 from '../../assets/PDFdark0.png';
-import pdfDark1 from '../../assets/PDFdark1.png';
-import pdfDark2 from '../../assets/PDFdark2.png';
-import pdfDark3 from '../../assets/PDFdark3.png';
-import pdfDark4 from '../../assets/PDFdark4.png';
+import pdfDark0 from '/images/PDFdark0.png';
+import pdfDark1 from '/images/PDFdark1.png';
+import pdfDark2 from '/images/PDFdark2.png';
+import pdfDark3 from '/images/PDFdark3.png';
+import pdfDark4 from '/images/PDFdark4.png';
 
-import ninoshima1 from '../../assets/Ninoshima1.png'
-import ninoshima2 from '../../assets/Ninoshima2.png'
-import ninoshima3 from '../../assets/Ninoshima3.png'
+import ninoshima1 from '/images/Ninoshima1.png'
+import ninoshima2 from '/images/Ninoshima2.png'
+import ninoshima3 from '/images/Ninoshima3.png'
 
 
 export const portfolioList = [
