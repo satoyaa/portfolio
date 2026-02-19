@@ -1,0 +1,80 @@
+:root {
+  font-family: BIZ UDPGothic, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    min-width: none;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+img{
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column;
+}
+
+/* ボタンのデフォルトスタイルを削除 */
+button {
+  background-color: transparent; /* 背景色を透明に */
+  border: none;                  /* 枠線を消す */
+  cursor: pointer;               /* カーソルを指マークにする */
+  outline: none;                 /* フォーカス時の枠線を消す */
+  padding: 0;                    /* 内側の余白を消す */
+  appearance: none;              /* OS標準の立体的な見た目を解除 */
+  font-family: inherit;          /* フォントを親要素に合わせる */
+  font-size: inherit;            /* サイズを親要素に合わせる */
+}
+
+/* リストのデフォルトスタイルを削除 */
+ul, ol {
+  padding: 0;                    /* 左側のインデント（余白）を消す */
+  margin: 0;                     /* 上下の余白を消す */
+  list-style: none;              /* 行頭の「・」マークを消す */
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+  font-size: 1.6em;
+  line-height: 1;
+  }
+
+  :root{
+    font-size: 12px;
+  }
+}

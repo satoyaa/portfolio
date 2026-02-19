@@ -1,0 +1,539 @@
+#root {
+  width: 100vw;
+  min-width: 1280px;
+  overflow: hidden;
+  background-image: url(./assets/TopVisual.jpg);
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column;
+
+}
+
+
+.App{
+  display: flex;
+  width: 100vw;
+  max-width: 1440px;
+  transition: transform 0.3s ease-in-out; 
+}
+
+.move{
+  transform: translateX(-60%); 
+  transition: transform 0.3s ease-in-out; 
+}
+
+.navArea{
+  height: 88vh;
+  width: 60%;
+  padding: 6vh 0;
+  background-color: #F2F2F2;
+}
+
+.pageTitle{
+  margin: 0 0 0 2rem;
+  font-size: 5rem;
+  left: 15%;
+}
+
+.navList{
+  left: 20%;
+  margin: 2rem 0 0 6rem;
+  font-size: 2rem;
+}
+
+
+
+.navItem{
+  font-family: sans-serif;
+  padding-left: 40px;
+  position: relative;
+  transition: color 0.3s;
+  text-align: left;
+  transition: padding 0.3s ease, background-color 0.3s ease;
+}
+
+.navItem::before {
+  content: '';
+  position: absolute;
+  left: 0;           /* 左端に配置 */
+  top: 50%;          /* 上下中央に配置 */
+  transform: translateY(-50%); /* 完全に中央揃えにする補正 */
+  height: 2px;       /* 棒の太さ */
+  width: 15px;       /* 【重要】普段の棒の長さ */
+  background-color: #333; /* 棒の色 */
+  transition: width 0.3s ease, background-color 0.3s ease; /* 伸びるアニメーションの設定 */
+}
+
+.navItem.selectedItem{
+  padding-left: 75px;
+}
+
+.navItem.selectedItem::before {
+  width: 50px;       /* 【重要】選択時に棒を長くする */
+}
+
+.mediaLinks{
+  position: absolute;
+  bottom: 5vh;
+  margin: 0 0 0 4rem;
+}
+
+.icons{
+  margin: 0.5rem;
+}
+
+.contentsArea{
+  width: 40%;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column;
+}
+
+.topVisual{
+  position: fixed;
+  opacity: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.ProfileContents{
+  height: 100vh;
+  width: 100%;
+}
+
+.profileImageFrame{
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column;
+  height: 40vh;
+  overflow: hidden;
+}
+
+.profileImage{
+  height: 90%;
+  border-radius: 8px;
+}
+
+.ProfileContents{
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column;
+}
+
+.profileContainer {
+  background-color: #eee; /* 画像のような薄いグレー */
+  padding: 20px 20px 0px 20px;
+  border-radius: 8px; /* 角を少し丸める */
+  max-width: 500px;   /* 必要に応じて幅を制限 */
+  font-family: sans-serif;
+}
+
+/* リスト全体のスタイル */
+.profileList {
+  list-style: none; /* ・を消す */
+  padding: 0;
+  margin: 0;
+}
+
+/* 各行のスタイル */
+.profileItem {
+  display: flex;         /* 横並びにする */
+  align-items: flex-start; /* 上揃え（複数行の時にきれい） */
+  margin-bottom: 16px;   /* 行の間隔 */
+}
+
+/* 左側のラベル（氏名、年齢など） */
+.profileLabel {
+  color: #999999;
+  font-weight: bold;
+  width: 80px;           /* 幅を固定して揃える */
+  min-width: 60px;       /* 縮まないようにする */
+  margin-right: 16px;    /* 右側の文字との間隔 */
+  padding-top: 2px;      /* 微調整 */
+}
+
+.profileValue {
+  color: #000000;
+  font-weight: bold;     /* 太字（画像に合わせて調整） */
+  font-size: 1.1em;      /* 少し大きく */
+  line-height: 1.5;      /* 行間を読みやすく */
+  flex: 1;               /* 残りの幅を全部使う */
+}
+
+.Portfolio{
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.scrollContainer{
+  height: 95vh; /* 例：画面の高さの80% */
+  overflow-y: auto; 
+
+  /* デザイン調整（任意） */
+  width: 100%;
+  
+  /* 中身をきれいに並べる */
+  display: flex;
+  flex-direction: column; /* 縦並び */
+  gap: 20px; /* 画像ごとの隙間 */
+
+  align-items: center;
+  flex-direction: column;
+  scrollbar-width: none; 
+
+  /* 画像などを端でフェードさせる設定（Swiperと同じ） */
+  -webkit-mask-image: linear-gradient(
+    to top,
+    transparent 0%,
+    black 5%,
+    black 95%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to top,
+    transparent 0%,
+    black 5%,
+    black 95%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 5%,
+    black 95%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 5%,
+    black 95%,
+    transparent 100%
+  );
+}
+
+.scrollContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.portfolioCard{
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+  margin: 5% 0;
+  padding: 1rem;
+  width: 70%;
+  height: 40%;
+  cursor: pointer;
+  background-color: #F2F2F2;
+  display: flex;
+  position: relative;
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column;
+}
+
+.portfolioCard:hover{
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.selected{
+  transform: scale(1.05);
+  border: 3px solid rgba(3, 72, 247, 0.723);
+}
+
+
+.portfolioCardImage{
+  width: 90%;
+  margin-top: 2%;
+  max-width: 500px;
+  border-radius: 8px;
+}
+
+.portfolioCardTitle{
+  font-size: 2rem;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* 半透明の黒 */
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* 最初は隠しておく */
+  font-weight: bold;
+}
+
+/* ホバー時の動作 */
+.portfolioCard:hover .overlay {
+  opacity: 1; /* 表示する */
+}
+
+
+.portfolioContents{
+  position: absolute;
+  width: 150%;
+  right: -150%;
+}
+
+.isOpen{
+  display: none;
+}
+
+.portfolioMain{
+  margin: 2rem;
+  padding: 1rem;
+  background-color: #F2F2F2;
+  border-radius: 8px;
+}
+
+.portfolioTitle{
+  margin: 2vh 0;
+}
+
+.portfolioExplanation{
+  margin: 2vh 0;
+  font-family: Shippori Mincho;
+}
+
+.portfolioCloser{
+  position: absolute;
+  z-index: 5;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+  right: 2%;
+  top: 2%;
+  font-size: 5vh;
+}
+
+.dli-close-circle {
+  display: inline-block;
+  vertical-align: middle;
+  color: #0095ff;
+  background-color: #F2F2F2;
+  line-height: 1;
+  position: relative;
+  width: 1em;
+  height: 1em;
+  border: 0.1em solid currentColor;
+  border-radius: 50%;
+  box-sizing: content-box;
+}
+
+.dli-close-circle > span {
+  width: 52%;
+  height: 0.1em;
+  background: currentColor;
+  border-radius: 0.1em;
+  position: relative;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.dli-close-circle > span::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: inherit;
+  transform: rotate(90deg);
+}
+
+.contact-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #33333375;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* フォームを囲むラッパー（必要に応じて背景色を追加可能） */
+.contact-wrapper {
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+}
+
+
+/* サブタイトル */
+.contact-description {
+  font-size: 1.5rem;
+  color: #F2F2F2;
+  text-shadow: 0 10px 30px rgb(0, 0, 0);
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+/* 入力フィールドの共通スタイル */
+.form-input,
+.form-textarea {
+  width: 90%;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-radius: 25px; /* 丸みを強くする */
+  border: none;
+  background-color: #f0f0f0; /* 少しグレーがかった白 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* 影で立体感を出す */
+  font-size: 1rem;
+  color: #333;
+  box-sizing: border-box;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+/* フォーカス時のスタイル */
+.form-input:focus,
+.form-textarea:focus {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.form-textarea {
+  resize: vertical; /* 縦方向のみリサイズ可能 */
+  min-height: 150px;
+}
+
+/* 送信ボタン */
+.submit-button {
+  background-color: white;
+  color:#0095ff; 
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 12px 60px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  /* 下方向に緑色の影をつけて立体ボタン風にする */
+  box-shadow: 0 5px 0px #0095ff, 0 10px 10px rgba(0,0,0,0.1); 
+  text-transform: uppercase;
+  transition: all 0.1s ease;
+  margin-top: 10px;
+}
+
+/* ボタンを押した時の動き */
+.submit-button:active {
+  transform: translateY(4px); /* ボタンが沈む動き */
+  box-shadow: 0 1px 0px #0095ff, 0 2px 5px rgba(0,0,0,0.1);
+}
+
+@media screen and (max-width: 768px) {
+  #root{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    min-width: 375px;
+    height: auto;
+  }
+
+  .App{
+    display: block;
+  }
+
+  .navArea{
+  height: 30%;
+  width: 100%;
+  padding: 1rem 0;
+  }
+
+  .move{
+    transform: translateX(0%); 
+    transition: transform 0.3s ease-in-out; 
+  }
+
+  .contentsArea{
+    width: 100%;
+    height: auto;
+  }
+
+  .topVisual{
+    position: static;
+  }
+
+  .Portfolio{
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: block;
+  }
+
+  .portfolioCard{
+    width: 35vw;
+    max-width: 70vw;
+    flex-shrink: 0;
+  }
+
+  .portfolioCardTitle{
+    font-size: 1rem;
+  }
+
+  .scrollContainer{
+    width: 100%; 
+    height: auto; 
+
+    /* 2. 横方向に溢れた場合にスクロールさせる */
+    overflow-x: auto; 
+
+    /* 3. 中身を横並びにする */
+    display: flex;
+    flex-direction: row; /* 横並びに変更 */
+    gap: 20px;
+
+    /* デザイン調整 */
+    align-items: center;
+    scrollbar-width: none; /* スクロールバーを隠す設定は維持 */
+  }
+
+  .portfolioContents{
+    position: static;
+    width: 100%;
+    right: 0%;
+  }
+
+  .isOpen{
+    display: block;
+  }
+
+  .portfolioMain{
+    min-height: auto;
+  }
+
+  .portfolioCloser{
+    display: none;
+  }
+
+  .contact-container{
+    min-height: 70vh;
+  }
+
+  .mediaLinks{
+    position: static;
+    background-color: #F2F2F2;
+    height: auto;
+    bottom: auto;
+    padding: 1% 0;
+    margin: 0 0 0 0;
+  }
+}
