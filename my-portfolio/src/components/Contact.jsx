@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 
 const serviceId = import.meta.env.VITE_SERVICE_ID;
@@ -9,6 +9,10 @@ const Contact = ({pageFlag}) => {
   const form = useRef(); // フォームのDOM要素を参照するために使用
   const [status, setStatus] = useState(''); // 送信状況（成功/失敗）のメッセージ
 
+  useEffect(() => {
+    emailjs.init(publicKey);
+  }, []);
+
   const sendEmail = (e) => {
     e.preventDefault();
     setStatus('送信中...');
@@ -18,8 +22,7 @@ const Contact = ({pageFlag}) => {
     emailjs.sendForm(
       serviceId,   // ステップ1で取得した Service ID
       templateId,  // ステップ1で取得した Template ID
-      form.current,
-      publicKey   // ステップ1で取得した Public Key
+      form.current
     )
     .then((result) => {
         console.log(result.text);
