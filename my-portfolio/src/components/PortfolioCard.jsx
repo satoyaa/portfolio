@@ -7,7 +7,7 @@ const PortfolioCard = ({portfolio, portfolioId, setPortfolioId}) => {
   const { isOpen, setIsOpen } = useContext(AppContext);
 
   return (
-    <div className= {portfolio.id === portfolioId ? 'portfolioCard selected' : 'portfolioCard'} onClick={() => {setIsOpen(true), setPortfolioId(portfolio.id)}}>
+    <div className={(portfolio.id === portfolioId) & isOpen ? 'portfolioCard selected' : 'portfolioCard'} onClick={() => {setIsOpen(true), setPortfolioId(portfolio.id)}}>
         <img className='portfolioCardImage' src={portfolio.images[0].image} alt="ポートフォリオの顔写真" />
         <h1 className='portfolioCardTitle'>{portfolio.title}</h1>
         <div className="overlay">

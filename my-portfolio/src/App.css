@@ -2,7 +2,7 @@
   width: 100vw;
   min-width: 1280px;
   overflow: hidden;
-  background-image: url(/images/TopVisual.jpg);
+  /*background-image: url(/images/TopVisual.jpg);*/
   display: flex;
   justify-content: center; 
   align-items: center;
@@ -28,6 +28,7 @@
   width: 60%;
   padding: 6vh 0;
   background-color: #F2F2F2;
+  box-shadow: 5px 0px 10px rgba(0,0,0,0.2);
 }
 
 .pageTitle{
@@ -45,7 +46,6 @@
 
 
 .navItem{
-  font-family: sans-serif;
   padding-left: 40px;
   position: relative;
   transition: color 0.3s;
@@ -92,12 +92,79 @@
 }
 
 .topVisual{
-  position: fixed;
-  opacity: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  z-index: -1;
+  z-index: 1;
   overflow: hidden;
+  position: relative;
+}
+
+
+
+.modelChangeButton{
+  position: absolute;
+  top: 50%;
+	display: inline-block;
+	padding: 0 0 0 36px;
+	color: #333;
+	vertical-align: middle;
+	text-decoration: none;
+}
+.modelChangeButton::before,
+.modelChangeButton::after{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	content: "";
+	vertical-align: middle;
+}
+
+.modelChangeButtonM::before,
+.modelChangeButtonM::after{
+	left: 0;
+}
+
+.modelChangeButtonA::before,
+.modelChangeButtonA::after{
+	right: 0;
+}
+
+.modelChangeButton::before{
+	box-sizing: border-box;
+	width: 2.4rem;
+	height: 2.4rem;
+	border: 3px solid #333333;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+.modelChangeButton::after{
+	width: 0.6rem;
+	height: 0.6rem;
+}
+
+.modelChangeButtonA{
+  left: 1rem;
+}
+
+.modelChangeButtonM{
+  right: 1rem;
+}
+
+.modelChangeButtonM::after{
+	left: 0.6rem;
+	border-top: 3px solid #333333;
+	border-right: 3px solid #333333;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.modelChangeButtonA::after{
+	right: 0.6rem;
+	border-top: 3px solid #333333;
+	border-left: 3px solid #333333;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
 }
 
 .ProfileContents{
@@ -110,12 +177,15 @@
   justify-content: center; 
   align-items: center;
   flex-direction: column;
-  height: 40vh;
   overflow: hidden;
+  max-height: 40%;
+  max-width: 90%;
 }
 
 .profileImage{
-  height: 90%;
+  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
   border-radius: 8px;
 }
 
@@ -131,7 +201,6 @@
   padding: 20px 20px 0px 20px;
   border-radius: 8px; /* 角を少し丸める */
   max-width: 500px;   /* 必要に応じて幅を制限 */
-  font-family: sans-serif;
 }
 
 /* リスト全体のスタイル */
@@ -159,7 +228,7 @@
 }
 
 .profileValue {
-  color: #000000;
+  color: #333333;
   font-weight: bold;     /* 太字（画像に合わせて調整） */
   font-size: 1.1em;      /* 少し大きく */
   line-height: 1.5;      /* 行間を読みやすく */
@@ -224,12 +293,12 @@
 }
 
 .portfolioCard{
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
   border-radius: 8px;
   margin: 5% 0;
   padding: 1rem;
   width: 70%;
-  height: 40%;
+  height: auto;
   cursor: pointer;
   background-color: #F2F2F2;
   display: flex;
@@ -237,16 +306,15 @@
   justify-content: center; 
   align-items: center;
   flex-direction: column;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
 
 .portfolioCard:hover{
   transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 .selected{
   transform: scale(1.05);
-  border: 3px solid rgba(3, 72, 247, 0.723);
 }
 
 
@@ -306,7 +374,7 @@
 
 .portfolioExplanation{
   margin: 2vh 0;
-  font-family: Shippori Mincho;
+  font-weight: normal;
 }
 
 .portfolioCloser{
@@ -323,7 +391,7 @@
 .dli-close-circle {
   display: inline-block;
   vertical-align: middle;
-  color: #0095ff;
+  color: #333333;
   background-color: #F2F2F2;
   line-height: 1;
   position: relative;
@@ -368,7 +436,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #33333375;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
@@ -383,8 +450,7 @@
 /* サブタイトル */
 .contact-description {
   font-size: 1.5rem;
-  color: #F2F2F2;
-  text-shadow: 0 10px 30px rgb(0, 0, 0);
+  color: #333333;
   font-weight: bold;
   margin-bottom: 2rem;
 }
@@ -420,7 +486,7 @@
 /* 送信ボタン */
 .submit-button {
   background-color: white;
-  color:#0095ff; 
+  color:#333333; 
   font-size: 1.1rem;
   font-weight: bold;
   padding: 12px 60px;
@@ -428,7 +494,7 @@
   border: none;
   cursor: pointer;
   /* 下方向に緑色の影をつけて立体ボタン風にする */
-  box-shadow: 0 5px 0px #0095ff, 0 10px 10px rgba(0,0,0,0.1); 
+  box-shadow: 0 5px 0px #333333, 0 10px 10px rgba(0,0,0,0.1); 
   text-transform: uppercase;
   transition: all 0.1s ease;
   margin-top: 10px;
@@ -437,7 +503,7 @@
 /* ボタンを押した時の動き */
 .submit-button:active {
   transform: translateY(4px); /* ボタンが沈む動き */
-  box-shadow: 0 1px 0px #0095ff, 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 0px #333333, 0 2px 5px rgba(0,0,0,0.1);
 }
 
 @media screen and (max-width: 768px) {

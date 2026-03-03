@@ -9,7 +9,7 @@ const ProfileContents = () => {
         { label: '大学', value: '広島市立大学' },
         { label: '学部', value: '情報科学部' },
         { label: '使用技術', value: 'React 1年半\nHTML,CSS,Java 3年\nC言語 1年\nPython 4年' },
-        { label: '趣味', value: 'プログラミング、アニメ鑑賞' },
+        { label: '資格', value: '基本情報技術者試験合格' },
     ];
     return (
         <div className="profileContainer">
