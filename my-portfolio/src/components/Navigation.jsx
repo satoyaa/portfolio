@@ -4,7 +4,7 @@ import {AppContext} from './Context/Context.jsx'
 
 
 
-const pageTitles = [{title:"TOP", id:0}, {title:"プロフィール", id:1}, {title:"制作物", id:2}, {title:"問い合わせ", id:3}];
+const pageTitles = [{title:"TOP", id:0}, {title:"プロフィール", id:1}, {title:"制作物", id:2}, {title:"使用技術", id:3}, {title:"問い合わせ", id:4}];
 
 
 
@@ -20,8 +20,11 @@ const Navigation = ({pageFlag, setPageFlag}) => {
     else if(title === '制作物'){
       setPageFlag(2);
     }
-    else if(title === '問い合わせ'){
+    else if(title === '使用技術'){
       setPageFlag(3);
+    }
+    else if(title === '問い合わせ'){
+      setPageFlag(4);
     }
   };
 

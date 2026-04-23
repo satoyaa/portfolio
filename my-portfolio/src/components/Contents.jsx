@@ -1,6 +1,7 @@
 import Profile from './Profile'
 import Portfolio from './Portfolio'
 import Contact from './Contact'
+import Technology from './Technology'
 import Top from './Top'
 
 const Contents = ({pageFlag}) => {
@@ -15,6 +16,9 @@ const Contents = ({pageFlag}) => {
       return <Portfolio></Portfolio>;
     }
     if(pageFlag === 3){
+      return <Technology></Technology>;
+    }
+    if(pageFlag === 4){
       return <Contact></Contact>;
     }
   }

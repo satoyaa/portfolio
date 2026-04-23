@@ -27,7 +27,7 @@
   height: 88vh;
   width: 60%;
   padding: 6vh 0;
-  background-color: #F2F2F2;
+  background-color: #F9FAFB;
   box-shadow: 5px 0px 10px rgba(0,0,0,0.2);
 }
 
@@ -197,7 +197,7 @@
 }
 
 .profileContainer {
-  background-color: #eee; /* 画像のような薄いグレー */
+  background-color: #F9FAFB; /* 画像のような薄いグレー */
   padding: 20px 20px 0px 20px;
   border-radius: 8px; /* 角を少し丸める */
   max-width: 500px;   /* 必要に応じて幅を制限 */
@@ -300,7 +300,7 @@
   width: 70%;
   height: auto;
   cursor: pointer;
-  background-color: #F2F2F2;
+  background-color: #F9FAFB;
   display: flex;
   position: relative;
   justify-content: center; 
@@ -354,7 +354,9 @@
 .portfolioContents{
   position: absolute;
   width: 150%;
+  height: 100%;
   right: -150%;
+  overflow-y: auto;
 }
 
 .isOpen{
