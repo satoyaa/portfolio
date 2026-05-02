@@ -1,8 +1,9 @@
-# portfolio
-this is my portfolio page
+# ポートフォリオ
+これは私が今までに作成してきたアプリケーションをまとめたサイトです．
+ただ，まとめるだけではつまらないと感じたので，3Dモデルやメール機能など遊び心も取り入れています．
 
-# technology
+# 使用技術
 React+Vite
 
-hosting at here
+# リンク
 https://satoyaiwamuro.com/
