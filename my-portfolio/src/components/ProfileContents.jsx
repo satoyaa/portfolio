@@ -1,3 +1,10 @@
+/*
+ * Component: ProfileContents
+ * Props: none
+ * Description:
+ *  - 内部定義したプロフィールデータをリスト表示する。
+ *  - 値に改行文字("\n")が含まれる場合は <br/> に変換して表示する処理を行う。
+ */
 import React from 'react';
 
 const ProfileContents = () => {

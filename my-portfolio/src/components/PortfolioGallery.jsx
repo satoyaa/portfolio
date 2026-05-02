@@ -1,3 +1,14 @@
+/*
+ * Component: PortfolioGallery
+ * Props:
+ *  - images: Array<{ id, image, alt }>
+ * Description:
+ *  - 受け取った画像配列を Swiper コンポーネントでスライド表示する。
+ *  - Pagination と Navigation を有効にし、ループ・中央表示などの設定でカルーセル表示する。
+ * Dependencies:
+ *  - swiper/react, swiper/modules
+ *  - './CSS/PortfolioGallery.css' にスタイル定義が必要
+ */
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper/modules';
 

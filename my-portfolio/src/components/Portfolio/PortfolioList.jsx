@@ -1,3 +1,9 @@
+/*
+ * Data: portfolioList
+ * Description:
+ *  - サイト上で表示するポートフォリオ項目の配列データ。
+ *  - 各項目は `id`, `title`, `images`, `explanation`, `links` を持ち、コンポーネントでマップして使用する。
+ */
 import comingSoon from '/images/ComingSoon.png'
 
 import pdfDark0 from '/images/PDFdark0.png';

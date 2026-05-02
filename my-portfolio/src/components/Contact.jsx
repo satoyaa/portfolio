@@ -1,3 +1,14 @@
+/*
+ * Component: Contact
+ * Props:
+ *  - pageFlag: 現在のページフラグ（未使用だが親から渡される）
+ * Description:
+ *  - EmailJS を利用した問い合わせフォームを表示し、フォーム送信時に EmailJS の API を呼び出す。
+ *  - 環境変数 `VITE_SERVICE_ID`, `VITE_TEMPLATE_ID`, `VITE_PUBLIC_KEY` を利用するため、.env の設定が必要。
+ *  - 送信中・成功・失敗のステータス表示を行う。
+ * Dependencies:
+ *  - @emailjs/browser
+ */
 import React, { useState, useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 

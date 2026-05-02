@@ -1,3 +1,9 @@
+/*
+ * Component: ProfileImage
+ * Props: none
+ * Description:
+ *  - `public/images` 配下のプロフィール画像を読み込み、フレーム内に表示するだけのシンプルなコンポーネント。
+ */
 import myProfileImage from '/images/Profile.jpg';
 
 const ProfileImage = () => {

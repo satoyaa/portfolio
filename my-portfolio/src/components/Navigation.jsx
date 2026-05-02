@@ -1,3 +1,13 @@
+/*
+ * Component: Navigation
+ * Props:
+ *  - pageFlag: 現在のページインデックス
+ *  - setPageFlag: ページを切り替える関数
+ * Description:
+ *  - サイト内のページ切り替え用ナビゲーションを表示する。
+ *  - `pageTitles` を元にボタンを並べ、クリックで `setPageFlag` を呼ぶ。
+ *  - `AppContext.isOpen` を参照して、モーダル（ポートフォリオ詳細）表示時のスタイル変更を行う。
+ */
 import {useContext} from 'react';
 
 import {AppContext} from './Context/Context.jsx'

@@ -1,3 +1,11 @@
+/*
+ * Component: Contents
+ * Props:
+ *  - pageFlag: number (0=Top, 1=Profile, 2=Portfolio, 3=Technology, 4=Contact)
+ * Description:
+ *  - `pageFlag` に応じて表示コンポーネント（Top, Profile, Portfolio, Technology, Contact）を切り替えてレンダリングする。
+ *  - シンプルなルーティング代替として機能するコンテナコンポーネント。
+ */
 import Profile from './Profile'
 import Portfolio from './Portfolio'
 import Contact from './Contact'

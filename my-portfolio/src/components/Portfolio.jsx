@@ -1,3 +1,11 @@
+
+/*
+ * Component: Portfolio
+ * Props: none
+ * Description:
+ *  - `portfolioList` をマップして `PortfolioCard` を表示し、選択中の `portfolioId` に応じて `PortfolioContents` に詳細データを渡す。
+ *  - 内部で `useState` によって現在選択中のポートフォリオを管理する。
+ */
 import { useState } from 'react';
 
 import PortfolioCard from './PortfolioCard.jsx';

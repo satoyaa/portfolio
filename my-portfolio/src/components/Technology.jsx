@@ -1,20 +1,27 @@
+/*
+ * Component: Technology
+ * Props: none
+ * Description:
+ *  - サイト作成で使用した技術の一覧を表示するセクション。
+ *  - 値内の改行文字を <br/> に変換して表示する共通処理を使用している。
+ */
 import React, { useState, useRef, useEffect } from 'react';
 
 const Technology = () => {
 
-  const profileData = [
-        { label: 'フレームワーク', value: 'React+Vite' },
-        { label: 'モジュール', value: 'React Tree Fiber, EmailJS' },
-        { label: 'インフラ', value: 'Vercel' },
-        { label: '3Dモデル制作', value: 'Blender' },
-        { label: 'icons', value: 'react-icons' },
-    ];
+    const techData = [
+                { label: 'フレームワーク', value: 'React+Vite' },
+                { label: 'モジュール', value: 'React Tree Fiber, EmailJS' },
+                { label: 'インフラ', value: 'Vercel' },
+                { label: '3Dモデル制作', value: 'Blender' },
+                { label: 'icons', value: 'react-icons' },
+        ];
     return (
         <>
         <p>ここでは，このwebサイト作成に使用した技術を紹介します．</p>
         <div className="profileContainer">
             <ul className="profileList">
-                {profileData.map((item, index) => (
+                {techData.map((item, index) => (
                 <li key={index} className="profileItem">
                     <span className="profileLabel">{item.label}</span>
                     <span className="profileValue">
