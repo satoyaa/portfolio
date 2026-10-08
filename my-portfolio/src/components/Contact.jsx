@@ -16,7 +16,7 @@ const serviceId = import.meta.env.VITE_SERVICE_ID;
 const templateId = import.meta.env.VITE_TEMPLATE_ID;
 const publicKey = import.meta.env.VITE_PUBLIC_KEY;
 
-const Contact = ({pageFlag}) => {
+const Contact = () => {
   const form = useRef(); // フォームのDOM要素を参照するために使用
   const [status, setStatus] = useState(''); // 送信状況（成功/失敗）のメッセージ
 

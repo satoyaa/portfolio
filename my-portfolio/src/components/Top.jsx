@@ -10,12 +10,12 @@
  */
 import {useState} from 'react';
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Environment } from '@react-three/drei';
+import { OrbitControls } from '@react-three/drei';
 import Top3DModel from './Top3DModel.jsx';
 
 const Models = ['/PolarBear.glb', '/Creature.glb'];
 
-const Top = ({pageFlag}) => {
+const Top = () => {
   const [modelFlag, setModelFlag] = useState(0);
 
   const changeModel = (operation) =>{

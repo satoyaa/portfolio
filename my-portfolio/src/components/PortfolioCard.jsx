@@ -9,7 +9,7 @@
  *  - クリックで `setIsOpen(true)` と `setPortfolioId(portfolio.id)` を呼び、詳細表示を右からスライドして表示する。
  *  - 選択状態のスタイル切替を行う（`selected` クラス付与）。
  */
-import { useState, useContext} from 'react';
+import { useContext} from 'react';
 
 import {AppContext} from './Context/Context.jsx'
 

@@ -5,7 +5,7 @@
  *  - サイト作成で使用した技術の一覧を表示するセクション。
  *  - 値内の改行文字を <br/> に変換して表示する共通処理を使用している。
  */
-import React, { useState, useRef, useEffect } from 'react';
+import React from 'react';
 
 const Technology = () => {
 
