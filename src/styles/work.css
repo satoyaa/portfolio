@@ -88,6 +88,7 @@
 
 .project-feature {
   min-height:410px;
+  height: 70vh;
   border:1px solid rgba(137,155,226,.32);
   border-radius:14px;
   overflow:hidden;
@@ -196,6 +197,7 @@
 
   .project-feature {
     grid-template-columns:1fr;
+    height: 80vh;
   }
 
   .feature-copy {
