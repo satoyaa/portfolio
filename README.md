@@ -19,21 +19,15 @@
 - UI: react-icons, swiper
 - メール送信: @emailjs/browser
 
-（開発依存やスクリプトの詳細は my-portfolio/package.json を参照してください）
+（開発依存やスクリプトの詳細はルートの `package.json` を参照してください）
 
 ## 動作環境（前提）
 - Node.js（推奨 LTS 版）
 - npm または yarn
 
 ## 使い方（ローカルで確認）
-1. リポジトリをクローンまたはワークツリーを取得します。
-2. my-portfolio ディレクトリに移動します:
-
-```bash
-cd my-portfolio
-```
-
-3. 依存関係をインストールします:
+1. リポジトリをクローンまたはワークツリーを取得し、ルートディレクトリに移動します。
+2. 依存関係をインストールします:
 
 ```bash
 npm install
@@ -41,31 +35,31 @@ npm install
 # yarn
 ```
 
-4. 開発サーバを起動します:
+3. 開発サーバを起動します:
 
 ```bash
 npm run dev
 # ブラウザで http://localhost:5173 を開きます
 ```
 
-5. ビルド / プレビュー:
+4. ビルド / プレビュー:
 
 ```bash
 npm run build
 npm run preview
 ```
 
-6. リント:
+5. リント:
 
 ```bash
 npm run lint
 ```
 
 ## フォルダ構成（要約）
-- my-portfolio/
-	- public/ — 静的アセット
-	- src/ — React コンポーネント、スタイル、アセット
-	- src/components — ページ構成コンポーネント（Profile, Portfolio, Contact など）
+- `package.json` — 依存関係とスクリプト
+- `public/` — 静的アセット
+- `src/` — React コンポーネント、スタイル、アセット
+- `src/components/` — ページ構成コンポーネント（Profile, Portfolio, Contact など）
 
 ## デプロイ
 静的サイトホスティング（Netlify、Vercel、GitHub Pages など）へビルド成果物をアップロードしてください。Vite の `build` コマンドで生成される `dist` フォルダをデプロイ対象とします。
