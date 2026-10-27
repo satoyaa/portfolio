@@ -1,22 +1,11 @@
-import { Suspense, useSyncExternalStore } from 'react'
+import { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { Float, OrbitControls, Stars } from '@react-three/drei'
+import useMediaQuery from '../../utils/useMediaQuery.js'
 import Top3DModel from './Top3DModel.jsx'
 
-const mobileQuery = '(max-width: 820px)'
-
-function subscribeToMobileWidth(callback) {
-  const mediaQuery = window.matchMedia(mobileQuery)
-  mediaQuery.addEventListener('change', callback)
-  return () => mediaQuery.removeEventListener('change', callback)
-}
-
-function isMobileWidth() {
-  return window.matchMedia(mobileQuery).matches
-}
-
 function ModelStage({ modelPath, caption }) {
-  const isMobile = useSyncExternalStore(subscribeToMobileWidth, isMobileWidth, () => false)
+  const isMobile = useMediaQuery('(max-width: 820px)')
 
   return (
     <div className="model-stage" aria-label="インタラクティブな3D作品">

@@ -164,6 +164,7 @@
   min-width:0;
   display:flex;
   align-items:center;
+  justify-content:center;
 }
 
 .feature-image img {
@@ -183,7 +184,7 @@
     overflow-x:auto;
     border-left:0;
     border-top:1px solid var(--line);
-    margin-bottom:22px;
+    margin-top:22px;
   }
 
   .rail-item {
@@ -198,11 +199,22 @@
 
   .project-feature {
     grid-template-columns:1fr;
+    grid-template-rows:auto minmax(0,1fr);
     height: 80vh;
   }
 
   .feature-copy {
     min-height:315px;
     padding:30px;
+  }
+
+  .feature-image {
+    min-height:0;
+    padding-bottom:30px;
+  }
+
+  .feature-image img {
+    height:100%;
+    object-fit:contain;
   }
 }
