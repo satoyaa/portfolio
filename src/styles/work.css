@@ -89,6 +89,7 @@
 .project-feature {
   min-height:410px;
   height: 70vh;
+  max-height: 620px;
   border:1px solid rgba(137,155,226,.32);
   border-radius:14px;
   overflow:hidden;
