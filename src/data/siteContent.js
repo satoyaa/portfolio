@@ -57,7 +57,7 @@ export const projects = [
   {
     id: '02',
     title: 'ごみ分別ゲーム',
-    intro: '楽しく，学べぶごみ分別',
+    intro: '楽しく，学べるごみ分別',
     description: '株式会社コーヨー様とごみ問題とリサイクルについて，発信するために作成したゲーム．大学祭では，こどもに大人気!!',
     image: '/images/BunbetuGame.png',
     tags: ['React', 'ウェブデザイン', 'ゲーム設計', 'ごみ問題'],
