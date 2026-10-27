@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { FiArrowRight } from 'react-icons/fi'
 import { site } from '../../data/siteContent.js'
-import { scrollToSection } from '../../utils/scrollToSection.js'
 import ModelStage from './ModelStage.jsx'
 
 function HeroSection() {
