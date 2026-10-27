@@ -24,7 +24,7 @@
   margin:0 0 0 32px;
   padding-left:32px;
   border-left:1px solid var(--muted);
-  color:#d4d8e9;
+  color:#FCE2AD;
   font-size:11px;
   letter-spacing:.13em;
   line-height:1.7;
@@ -39,7 +39,7 @@ nav {
 nav button {
   background:none;
   padding:12px 0;
-  color:#c9cde0;
+  color:#FCE2AD;
   font-family:'DM Mono',monospace;
   font-size:14px;
 }

@@ -14,11 +14,6 @@ function HeroSection() {
         <p className="eyebrow">{hero.eyebrow}</p>
         <h1>{hero.name}</h1>
         <p className="hero-lede">{hero.lead}</p>
-        <p className="hero-description">
-          {hero.description[0]}
-          <br />
-          {hero.description[1]}
-        </p>
       </div>
       <ModelStage modelPath={modelPath} caption={hero.modelCaption} />
     </section>

@@ -18,7 +18,7 @@ export const site = {
     ],
     actionLabel: 'プロジェクトを見る',
     modelPaths: ['/Creature.glb', '/PolarBear.glb'],
-    modelCaption: ['IDEA', 'CODE', 'INTERACTION', 'EXPERIENCE'],
+    modelCaption: ['MY', 'FAVORITE', 'ANIMALS'],
   },
   profile: {
     eyebrow: 'PROFILE / ABOUT ME',

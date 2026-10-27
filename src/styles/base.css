@@ -2,10 +2,10 @@
 
 :root {
   --ink:#eef0ff;
-  --muted:#a7aec7;
+  --muted:#FCE2AD;
   --line:rgba(180,194,255,.22);
   --lime:#c7ff4c;
-  --violet:#8c5cff;
+  --violet:#ffeb87;
   --bg:#060914;
 }
 
@@ -43,7 +43,7 @@ main {
 
 .eyebrow {
   margin:0 0 21px;
-  color:#a6a9eb;
+  color:#FCE2AD;
   font:500 11px/1.5 'DM Mono',monospace;
   letter-spacing:.27em;
 }
