@@ -5,7 +5,7 @@ import ProjectRail from './ProjectRail.jsx'
 import ProjectFeature from './ProjectFeature.jsx'
 
 function WorkSection() {
-  const isStacked = useMediaQuery('(max-width: 1000px)')
+  const isStacked = useMediaQuery('(max-width: 820px)')
   const [selectedId, setSelectedId] = useState(projects[0].id)
   const selectedProject = projects.find((project) => project.id === selectedId) ?? projects[0]
   const rail = <ProjectRail projects={projects} selectedId={selectedId} onSelect={setSelectedId} />
