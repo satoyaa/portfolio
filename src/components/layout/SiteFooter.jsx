@@ -7,6 +7,7 @@ function SiteFooter() {
   return (
     <footer id="contact" className="site-footer">
       <img className="footer-moon" src="/images/moon-surface-watercolor.png" alt="" aria-hidden="true" />
+      <img className="footer-astronaut" src="/images/lapin.png" alt="" aria-hidden="true" />
       <div className="footer-links">
         <a className="contact-link" href={`mailto:${contact.email}`}>
           連絡する <FiMail />

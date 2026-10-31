@@ -27,6 +27,15 @@
   letter-spacing:.03em;
 }
 
+.hero-astronaut {
+  display:block;
+  width:clamp(100px,11vw,150px);
+  height:auto;
+  margin:30px 0 0 clamp(28px,5vw,70px);
+  pointer-events:none;
+  user-select:none;
+}
+
 .hero-description {
   color:var(--muted);
   font-size:14px;
@@ -87,6 +96,11 @@
 
   .hero h1 {
     font-size:52px;
+  }
+
+  .hero-astronaut {
+    width:100px;
+    margin:24px 0 0 20px;
   }
 
   .model-stage {

@@ -13,6 +13,7 @@ function HeroSection() {
         <p className="eyebrow">{hero.eyebrow}</p>
         <h1>{hero.name}</h1>
         <p className="hero-lede">{hero.lead}</p>
+        <img className="hero-astronaut" src="/images/astronaut.png" alt="" aria-hidden="true" />
       </div>
       <ModelStage modelPath={modelPath} caption={hero.modelCaption} />
     </section>
